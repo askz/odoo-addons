@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+ 		<record id="view_expenses_form_inherit" model="ir.ui.view">
+            <field name="name">hr.expense.form.inherit</field>
+            <field name="model">hr.expense.expense</field>
+            <field name='inherit_id' ref="hr_expense.view_expenses_form"/>
+            <field eval="15" name="priority"/>
+            <field name="arch" type="xml">
+            	<data>
+	                <button name="confirm" states="draft" string="Submit to Manager" type="workflow" class="oe_highlight" position="replace">
+	                	<button name="confirm" states="draft" string="Validate" type="workflow" class="oe_highlight"/>
+	                </button>
+	            </data>
+            </field>
+        </record>
+    </data>
+</openerp>
